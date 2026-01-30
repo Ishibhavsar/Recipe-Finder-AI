@@ -57,11 +57,26 @@ const getCachedRecipe = (recipeName: string, language: string): RecipeDetail | n
 
   // Return English version if requested
   if (language === 'en') {
+    if (import.meta.env.DEV) {
+      console.log(`[Cache] Returning English version for "${recipeName}"`);
+    }
     return cached.english;
   }
 
-  // Return cached translation if available
-  return cached.translations.get(language) || null;
+  // Check if translation exists for target language
+  const translation = cached.translations.get(language);
+  if (translation) {
+    if (import.meta.env.DEV) {
+      console.log(`[Cache] Returning ${language} translation for "${recipeName}"`);
+    }
+    return translation;
+  }
+
+  // Translation not cached - return null to trigger translation
+  if (import.meta.env.DEV) {
+    console.log(`[Cache] No ${language} translation found for "${recipeName}", will translate`);
+  }
+  return null;
 };
 
 const setCachedRecipe = (
