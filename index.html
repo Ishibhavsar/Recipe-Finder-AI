@@ -3,44 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Recipe Finder AI - Discover Recipes in Multiple Languages</title>
-    <meta name="title" content="Recipe Finder AI - Discover Recipes in Multiple Languages" />
-    <meta name="description" content="Find and explore delicious recipes from around the world. Powered by AI with support for English, Spanish, Japanese, Hindi, and Thai languages." />
-    <meta name="keywords" content="recipes, cooking, food, AI recipes, multilingual recipes, recipe finder" />
-    <meta name="author" content="Recipe Finder AI" />
-    <meta name="robots" content="index, follow" />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#f97316" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Recipe Finder AI - Discover Recipes in Multiple Languages" />
-    <meta property="og:description" content="Find and explore delicious recipes from around the world. Powered by AI with support for multiple languages." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&h=630&fit=crop" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Recipe Finder AI - Discover Recipes in Multiple Languages" />
-    <meta property="twitter:description" content="Find and explore delicious recipes from around the world. Powered by AI." />
-    <meta property="twitter:image" content="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1200&h=630&fit=crop" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍳</text></svg>" />
-    
-    <!-- Fonts -->
+    <title>Recipe Finder AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              primary: '#f97316', // Orange-500
+              secondary: '#fb923c', // Orange-400
+              dark: '#1f2937',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #fcfaf8;
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+    </style>
   </head>
   <body>
-    <noscript>
-      <div style="text-align: center; padding: 50px; font-family: sans-serif;">
-        <h1>JavaScript Required</h1>
-        <p>This application requires JavaScript to run. Please enable JavaScript in your browser.</p>
-      </div>
-    </noscript>
-    <div id="root" role="application" aria-label="Recipe Finder Application"></div>
+    <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
