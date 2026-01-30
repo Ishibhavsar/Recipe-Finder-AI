@@ -70,16 +70,11 @@ export async function translateText(
 
 /**
  * Translates recipe content (structured data) to target language
+ * Handles both single objects and arrays
  */
 export async function translateRecipeContent(content: any, targetLang: string): Promise<any> {
   if (targetLang === 'en' || !content) {
     return content;
-  }
-
-  // Check cache for full recipe
-  const cacheKey = getCacheKey(JSON.stringify(content).substring(0, 100), 'en', targetLang);
-  if (translationCache.has(cacheKey)) {
-    return translationCache.get(cacheKey);
   }
 
   if (!ai) {
@@ -88,6 +83,44 @@ export async function translateRecipeContent(content: any, targetLang: string): 
 
   try {
     const targetLanguageName = LANGUAGE_NAMES[targetLang] || targetLang;
+    
+    // Handle array of recipes
+    if (Array.isArray(content)) {
+      const translatedArray = await Promise.all(
+        content.map(async (item) => {
+          // Check cache for each item
+          const itemCacheKey = getCacheKey(JSON.stringify(item).substring(0, 100), 'en', targetLang);
+          if (translationCache.has(itemCacheKey)) {
+            return translationCache.get(itemCacheKey);
+          }
+
+          const prompt = `Translate the following recipe data to ${targetLanguageName}. Keep the JSON structure exactly the same, only translate the text values (name, description, ingredients, instructions, tips, etc.). Return valid JSON only without any markdown formatting:\n\n${JSON.stringify(item, null, 2)}`;
+
+          const result = await ai.models.generateContent({
+            model: MODEL_NAME,
+            contents: prompt,
+          });
+
+          let responseText = result.text || '';
+          responseText = responseText
+            .replace(/```json\n?/g, '')
+            .replace(/```\n?/g, '')
+            .trim();
+
+          const translated = JSON.parse(responseText);
+          translationCache.set(itemCacheKey, translated);
+          return translated;
+        })
+      );
+      return translatedArray;
+    }
+
+    // Handle single recipe object
+    const cacheKey = getCacheKey(JSON.stringify(content).substring(0, 100), 'en', targetLang);
+    if (translationCache.has(cacheKey)) {
+      return translationCache.get(cacheKey);
+    }
+
     const prompt = `Translate the following recipe data to ${targetLanguageName}. Keep the JSON structure exactly the same, only translate the text values (name, description, ingredients, instructions, tips, etc.). Return valid JSON only without any markdown formatting:\n\n${JSON.stringify(content, null, 2)}`;
 
     const result = await ai.models.generateContent({
@@ -96,16 +129,12 @@ export async function translateRecipeContent(content: any, targetLang: string): 
     });
 
     let responseText = result.text || '';
-
-    // Clean markdown code blocks if present
     responseText = responseText
       .replace(/```json\n?/g, '')
       .replace(/```\n?/g, '')
       .trim();
 
     const translated = JSON.parse(responseText);
-
-    // Cache the result
     translationCache.set(cacheKey, translated);
 
     return translated;
