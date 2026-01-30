@@ -2,7 +2,7 @@
 
 **AI-powered, multilingual recipe discovery app built with React, TypeScript, and Google Gemini.**
 
-🔗 **Live Demo:** <add-your-deployment-link>
+🔗 **Live Demo:** https://recipe-finder-ai-brown.vercel.app/
 
 ---
 
