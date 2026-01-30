@@ -1,0 +1,70 @@
+{
+  "app": {
+    "name": "レシピファインダー AI",
+    "tagline": "AIで美味しいレシピを発見"
+  },
+  "nav": {
+    "home": "ホーム",
+    "categories": "カテゴリー"
+  },
+  "hero": {
+    "title": "次のお気に入りを",
+    "titleHighlight": "発見しよう",
+    "subtitle": "人工知能を活用した世界中の料理から何千ものレシピを探索",
+    "searchPlaceholder": "レシピを検索... (例: パスタ、ビリヤニ、寿司)",
+    "searchButton": "レシピを検索"
+  },
+  "categories": {
+    "title": "料理で探す",
+    "subtitle": "さまざまな料理の伝統からレシピを発見"
+  },
+  "recipes": {
+    "featured": "おすすめレシピ",
+    "popular": "今週の人気",
+    "viewRecipe": "レシピを見る",
+    "prepTime": "調理時間",
+    "calories": "カロリー",
+    "servings": "人前",
+    "difficulty": "難易度"
+  },
+  "recipeDetail": {
+    "backToRecipes": "レシピに戻る",
+    "ingredients": "材料",
+    "instructions": "作り方",
+    "tips": "調理のコツ",
+    "step": "ステップ",
+    "notFound": "レシピが見つかりません",
+    "notFoundMessage": "お探しのレシピが見つかりませんでした。",
+    "loading": "AIシェフがレシピを準備中..."
+  },
+  "search": {
+    "resultsFor": "検索結果",
+    "found": "見つかりました",
+    "possibilities": "美味しい可能性",
+    "noResults": "結果が見つかりません",
+    "tryDifferent": "別の検索語を試してください",
+    "loading": "レシピを読み込み中..."
+  },
+  "categoryDescriptions": {
+    "italian": "伝統的なパスタ、ピザ、地中海の味",
+    "japanese": "寿司、ラーメン、本格和食",
+    "mexican": "タコス、ブリトー、スパイシーな料理",
+    "vegan": "風味豊かな植物ベースの食事",
+    "dessert": "甘いお菓子と贅沢なデザート",
+    "indian": "濃厚なカレーと香り高いスパイス",
+    "thai": "完璧なバランスの大胆な味",
+    "mediterranean": "健康的で風味豊かな料理"
+  },
+  "language": {
+    "select": "言語を選択",
+    "en": "English",
+    "hi": "हिन्दी",
+    "ja": "日本語",
+    "es": "Español",
+    "th": "ไทย"
+  },
+  "footer": {
+    "poweredBy": "Google Geminiを搭載",
+    "rights": "レシピファインダー AI. 全著作権所有。"
+  }
+}

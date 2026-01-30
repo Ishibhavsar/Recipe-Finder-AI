@@ -1,0 +1,5 @@
+{
+  "name": "Recipe Finder AI",
+  "description": "A smart culinary companion that uses Gemini AI to generate recipes, categorize cuisines, and help you find your next delicious meal with a modern, responsive interface.",
+  "requestFramePermissions": []
+}

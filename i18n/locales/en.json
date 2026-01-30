@@ -1,0 +1,70 @@
+{
+  "app": {
+    "name": "Recipe Finder AI",
+    "tagline": "Discover delicious recipes powered by AI"
+  },
+  "nav": {
+    "home": "Home",
+    "categories": "Categories"
+  },
+  "hero": {
+    "title": "Discover Your Next",
+    "titleHighlight": "Favorite Recipe",
+    "subtitle": "Explore thousands of recipes from cuisines around the world, powered by artificial intelligence",
+    "searchPlaceholder": "Search for any recipe... (e.g., pasta, biryani, sushi)",
+    "searchButton": "Search Recipes"
+  },
+  "categories": {
+    "title": "Explore by Cuisine",
+    "subtitle": "Discover recipes from different culinary traditions"
+  },
+  "recipes": {
+    "featured": "Featured Recipes",
+    "popular": "Popular This Week",
+    "viewRecipe": "View Recipe",
+    "prepTime": "Prep Time",
+    "calories": "Calories",
+    "servings": "Servings",
+    "difficulty": "Difficulty"
+  },
+  "recipeDetail": {
+    "backToRecipes": "Back to Recipes",
+    "ingredients": "Ingredients",
+    "instructions": "Instructions",
+    "tips": "Cooking Tips",
+    "step": "Step",
+    "notFound": "Recipe Not Found",
+    "notFoundMessage": "We couldn't find the recipe you were looking for.",
+    "loading": "Our AI Chef is preparing your recipe..."
+  },
+  "search": {
+    "resultsFor": "Search Results for",
+    "found": "Found",
+    "possibilities": "delicious possibilities",
+    "noResults": "No results found",
+    "tryDifferent": "Try a different search term",
+    "loading": "Loading recipes..."
+  },
+  "categoryDescriptions": {
+    "italian": "Classic pasta, pizza, and Mediterranean flavors",
+    "japanese": "Sushi, ramen, and authentic Japanese cuisine",
+    "mexican": "Tacos, burritos, and spicy delights",
+    "vegan": "Plant-based meals full of flavor",
+    "dessert": "Sweet treats and indulgent desserts",
+    "indian": "Rich curries and aromatic spices",
+    "thai": "Bold flavors with perfect balance",
+    "mediterranean": "Healthy and flavorful dishes"
+  },
+  "language": {
+    "select": "Select Language",
+    "en": "English",
+    "hi": "हिन्दी",
+    "ja": "日本語",
+    "es": "Español",
+    "th": "ไทย"
+  },
+  "footer": {
+    "poweredBy": "Powered by Google Gemini",
+    "rights": "Recipe Finder AI. All rights reserved."
+  }
+}

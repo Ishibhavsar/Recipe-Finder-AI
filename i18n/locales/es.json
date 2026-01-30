@@ -1,0 +1,70 @@
+{
+  "app": {
+    "name": "Recipe Finder AI",
+    "tagline": "Descubre recetas deliciosas impulsadas por IA"
+  },
+  "nav": {
+    "home": "Inicio",
+    "categories": "Categorías"
+  },
+  "hero": {
+    "title": "Descubre Tu Próxima",
+    "titleHighlight": "Receta Favorita",
+    "subtitle": "Explora miles de recetas de cocinas de todo el mundo, impulsadas por inteligencia artificial",
+    "searchPlaceholder": "Busca cualquier receta... (ej: pasta, biryani, sushi)",
+    "searchButton": "Buscar Recetas"
+  },
+  "categories": {
+    "title": "Explorar por Cocina",
+    "subtitle": "Descubre recetas de diferentes tradiciones culinarias"
+  },
+  "recipes": {
+    "featured": "Recetas Destacadas",
+    "popular": "Popular Esta Semana",
+    "viewRecipe": "Ver Receta",
+    "prepTime": "Tiempo de Prep.",
+    "calories": "Calorías",
+    "servings": "Porciones",
+    "difficulty": "Dificultad"
+  },
+  "recipeDetail": {
+    "backToRecipes": "Volver a Recetas",
+    "ingredients": "Ingredientes",
+    "instructions": "Instrucciones",
+    "tips": "Consejos de Cocina",
+    "step": "Paso",
+    "notFound": "Receta No Encontrada",
+    "notFoundMessage": "No pudimos encontrar la receta que buscabas.",
+    "loading": "Nuestro Chef de IA está preparando tu receta..."
+  },
+  "search": {
+    "resultsFor": "Resultados de búsqueda para",
+    "found": "Encontrado",
+    "possibilities": "deliciosas posibilidades",
+    "noResults": "No se encontraron resultados",
+    "tryDifferent": "Intenta un término de búsqueda diferente",
+    "loading": "Cargando recetas..."
+  },
+  "categoryDescriptions": {
+    "italian": "Pasta clásica, pizza y sabores mediterráneos",
+    "japanese": "Sushi, ramen y auténtica cocina japonesa",
+    "mexican": "Tacos, burritos y delicias picantes",
+    "vegan": "Comidas a base de plantas llenas de sabor",
+    "dessert": "Dulces y postres indulgentes",
+    "indian": "Currys ricos y especias aromáticas",
+    "thai": "Sabores audaces con equilibrio perfecto",
+    "mediterranean": "Platos saludables y sabrosos"
+  },
+  "language": {
+    "select": "Seleccionar Idioma",
+    "en": "English",
+    "hi": "हिन्दी",
+    "ja": "日本語",
+    "es": "Español",
+    "th": "ไทย"
+  },
+  "footer": {
+    "poweredBy": "Impulsado por Google Gemini",
+    "rights": "Recipe Finder AI. Todos los derechos reservados."
+  }
+}
