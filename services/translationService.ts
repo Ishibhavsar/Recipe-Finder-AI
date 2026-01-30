@@ -139,7 +139,12 @@ export async function translateRecipeContent(content: any, targetLang: string): 
 
     return translated;
   } catch (error) {
-    console.error('Recipe translation error:', error);
+    // Check if it's a quota error
+    if (error instanceof Error && error.message.includes('429')) {
+      console.warn('⚠️ Translation quota exhausted. Displaying content in English. Quota resets daily.');
+    } else {
+      console.error('Recipe translation error:', error);
+    }
     return content; // Fallback to original content
   }
 }
@@ -178,7 +183,12 @@ export async function translateSearchQuery(query: string, sourceLang: string): P
 
     return translated;
   } catch (error) {
-    console.error('Query translation error:', error);
+    // Check if it's a quota error
+    if (error instanceof Error && error.message.includes('429')) {
+      console.warn('⚠️ Translation quota exhausted. Search will use English terms.');
+    } else {
+      console.error('Query translation error:', error);
+    }
     return query; // Fallback to original query
   }
 }
