@@ -44,7 +44,7 @@ This project focuses on real-world frontend engineering:
 
 ## ⚙️ Setup
 ```bash
-git clone <repo-url>
+git clone https://github.com/Ishibhavsar/Recipe-Finder-AI.git
 cd recipe-finder-ai
 npm install
 cp .env.example .env
