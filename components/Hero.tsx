@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Search, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
   const [query, setQuery] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
@@ -33,11 +35,10 @@ const Hero: React.FC = () => {
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-4xl sm:text-6xl font-serif font-bold mb-6 tracking-tight">
-          Find Your Next <span className="text-primary">Masterpiece</span>
+          {t('hero.title')} <span className="text-primary">{t('hero.titleHighlight')}</span>
         </h1>
         <p className="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-          Discover thousands of recipes, from quick weeknight meals to gourmet delights. 
-          Powered by Gemini AI to tailor suggestions just for you.
+          {t('hero.subtitle')}
         </p>
 
         <form onSubmit={handleSubmit} className="relative max-w-2xl mx-auto group">
@@ -51,7 +52,7 @@ const Hero: React.FC = () => {
           <input
             type="text"
             className="block w-full pl-12 pr-4 py-4 rounded-full border-2 border-transparent bg-white/10 backdrop-blur-sm text-white placeholder-gray-400 focus:bg-white focus:text-gray-900 focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20 transition-all shadow-xl text-lg"
-            placeholder="Search recipes (e.g., 'Spicy Chicken', 'Vegan Pasta')..."
+            placeholder={t('hero.searchPlaceholder')}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
@@ -60,12 +61,12 @@ const Hero: React.FC = () => {
             className="absolute right-2 top-2 bottom-2 px-6 bg-primary hover:bg-orange-600 text-white font-medium rounded-full transition-colors flex items-center justify-center disabled:opacity-70"
             disabled={isSubmitting}
           >
-            Search
+            {t('hero.searchButton')}
           </button>
         </form>
 
         <div className="mt-8 flex justify-center gap-3 text-sm text-gray-400">
-          <span>Popular:</span>
+          <span>{t('recipes.popular')}:</span>
           <button
             onClick={() => navigate('/search/Healthy')}
             className="hover:text-primary underline decoration-dotted"

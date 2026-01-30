@@ -8,11 +8,11 @@
     "categories": "Categories"
   },
   "hero": {
-    "title": "Discover Your Next",
-    "titleHighlight": "Favorite Recipe",
-    "subtitle": "Explore thousands of recipes from cuisines around the world, powered by artificial intelligence",
-    "searchPlaceholder": "Search for any recipe... (e.g., pasta, biryani, sushi)",
-    "searchButton": "Search Recipes"
+    "title": "Find Your Next",
+    "titleHighlight": "Masterpiece",
+    "subtitle": "Discover thousands of recipes, from quick weeknight meals to gourmet delights. Powered by Gemini AI to tailor suggestions just for you.",
+    "searchPlaceholder": "Search recipes (e.g., 'Spicy Chicken', 'Vegan Pasta')...",
+    "searchButton": "Search"
   },
   "categories": {
     "title": "Explore by Cuisine",
